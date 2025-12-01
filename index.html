@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AshfahAshraf-Portfolio</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+        <link rel="stylesheet" href="index.css">
+        <script src="theme.js"></script>
+</head>
+
+<body>
+<!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+    <div class="container">
+
+   <!-- Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible Menu -->
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+        </ul>
+
+        <button id="themeToggle" class="btn theme-btn">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+
+      </div>
+
+    </div>
+  </nav>
+
+
+
+
+  <!--HERO SECTION -->
+
+  <section class="hero d-flex align-items-center justify-content-center text-center " id="home">
+
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1614624532983-4ce03382d63d?fm=jpg&q=60&w=3000">
+    </div>
+
+    <div class="container position-relative hero-content">
+
+        <h1 class="fw-bold display-3 text-white fade-up">
+          Hi, I'm <span class="text-violet">Ashfah Ashraf</span>
+        </h1>
+
+        <p class="lead fw-bold text-secondary fade-up delay-1">Python Full Stack Developer</p>
+
+        <p class="skills-text text-violet slide-left delay-2">
+          React | Python | Django | REST API | MySQL
+        </p>
+
+        <div class="mt-4 fade-up delay-3">
+
+              <a href="#projects" class="btn btn-violet me-3">
+                View My Work ↓
+              </a>
+
+              <a href="#" download class="btn btn-violet">
+                Download Resume ↓
+              </a>
+
+        </div>
+
+
+    </div>
+
+  </section>
+
+  <!--About-->
+  <section class="about-section py-5" id="about">
+
+    <div class="container">
+
+          <h1 class="text-center mb-5 text-white display-4 fw-bold">
+            About <span class="text-violet">Me</span>
+          </h1>
+
+          <div class="row align-items-center justify-content-center text-center text-md-start">
+
+                <!-- LEFT IMAGE -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                  <img src="/ashfahashraf.jpg" class="img-fluid rounded-circle shadow profile-img" alt="Ashfah">
+                </div>
+
+                <!-- RIGHT CONTENT -->
+                <div class="col-md-6 text-white">
+
+
+
+                      <h2 class="fw-bold mb-3">Full Stack Developer</h2>
+
+                      <p class="about-text">
+                        I’m Ashfah Ashraf, a passionate Full Stack Developer specializing in Python, Django, React, and modern web
+                        technologies.
+                        I enjoy building clean, efficient, and scalable applications that solve real world problems.
+                      </p>
+
+                      <p class="about-text">
+                        I love transforming ideas into meaningful digital experiences from designing responsive frontends to
+                        developing secure and powerful backend systems.
+                      </p>
+
+                      <p class="about-text">
+                        I continuously explore new tools, improve my workflow, and stay updated with modern technologies to write
+                        smarter and more optimized code.
+                      </p>
+
+
+                      <!-- SKILL BADGES -->
+                      <div class="d-flex flex-wrap gap-2 mt-4">
+                        <span class="badge bg-dark border border-light px-3 py-2">React.js</span>
+                        <span class="badge bg-dark border border-light px-3 py-2">Bootstrap</span>
+                        <span class="badge bg-dark border border-light px-3 py-2">TailwindCSS</span>
+                        <span class="badge bg-dark border border-light px-3 py-2">Python</span>
+                        <span class="badge bg-dark border border-light px-3 py-2">MySQL</span>
+                      </div>
+
+                </div>
+
+          </div>
+    </div>
+
+  </section>
+
+  <!--Skils-->
+  <section id="skills" class="py-5 skills-section">
+
+    <div class="container">
+
+          <h2 class="text-center text-white mb-5 display-5 fw-bold">
+            Skills & <span class="text-violet">Expertise</span>
+          </h2>
+
+          <div class="row g-4">
+
+                <!-- FRONTEND -->
+                <div class="col-md-6 col-lg-3">
+                      <div class="skill-card h-100">
+                            <h4 class="skill-title mb-3">Frontend</h4>
+
+                            <p>React.js <span class="float-end">95%</span></p>
+                            <div class="progress mb-3">
+                              <div class="progress-bar" style="width:95%"></div>
+                            </div>
+
+                            <p>Tailwind CSS <span class="float-end">90%</span></p>
+                            <div class="progress mb-3">
+                              <div class="progress-bar" style="width:90%"></div>
+                            </div>
+
+                            <p>Bootstrap <span class="float-end">95%</span></p>
+                            <div class="progress mb-3">
+                              <div class="progress-bar" style="width:95%"></div>
+                            </div>
+
+                            <p>jQuery <span class="float-end">95%</span></p>
+                            <div class="progress">
+                              <div class="progress-bar" style="width:95%"></div>
+                            </div>
+                      </div>
+                </div>
+
+                <!-- BACKEND -->
+                <div class="col-md-6 col-lg-3">
+                      <div class="skill-card h-100">
+                            <h4 class="skill-title mb-3">Backend</h4>
+
+                            <p>Python <span class="float-end">90%</span></p>
+                            <div class="progress mb-3">
+                              <div class="progress-bar" style="width:90%"></div>
+                            </div>
+
+                            <p>Django <span class="float-end">90%</span></p>
+                            <div class="progress mb-3">
+                              <div class="progress-bar" style="width:90%"></div>
+                            </div>
+
+                            <p>REST APIs <span class="float-end">85%</span></p>
+                            <div class="progress">
+                              <div class="progress-bar" style="width:85%"></div>
+                            </div>
+                      </div>
+                </div>
+
+                <!-- DATABASE -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card h-100">
+                          <h4 class="skill-title mb-3">Database</h4>
+
+                          <p>MySQL <span class="float-end">95%</span></p>
+                          <div class="progress mb-3">
+                            <div class="progress-bar" style="width:95%"></div>
+                          </div>
+
+                          <p>MongoDB <span class="float-end">95%</span></p>
+                          <div class="progress">
+                            <div class="progress-bar" style="width:95%"></div>
+                          </div>
+                    </div>
+                </div>
+
+                <!-- TOOLS -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card h-100">
+                          <h4 class="skill-title mb-3">Tools & DevOps</h4>
+
+                          <p>Git & GitHub <span class="float-end">95%</span></p>
+                          <div class="progress">
+                            <div class="progress-bar" style="width:95%"></div>
+                          </div>
+                    </div>
+                </div>
+
+          </div>
+
+    </div>
+
+  </section>
+
+
+<!--Projects-->
+  <section id="projects" class="projects-section py-5">
+
+    <div class="container">
+
+          <h2 class="text-center text-white mb-5 display-5 fw-bold">
+            Featured <span class="text-violet">Projects</span>
+          </h2>
+
+          <div class="row g-4 justify-content-center">
+
+                <!-- Project Card 1 -->
+                <div class="col-md-4">
+                    <div class="card project-card bg-dark text-white border-0 shadow-lg h-100">
+                        <img src="/myg.png" class="card-img-top" alt="My-G Clone">
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">My-G Clone</h5>
+                            <p class="card-text">
+                              A responsive e-commerce UI inspired by myG with products, navigation, and clean UI.
+                            </p>
+
+                            <div class="mb-3">
+                              <span class="badge bg-secondary px-3 py-2">HTML</span>
+                              <span class="badge bg-secondary px-3 py-2">CSS</span>
+                            </div>
+
+                            <div class="d-flex gap-2">
+                                <a href="https://github.com/AshfahAshraf/myG-E-Commerce-website.git" class="btn btn-outline-light w-50">
+                                  <i class="fa-brands fa-github"></i> Code
+                                </a>
+                                <a href="#" class="btn btn-violet w-50">
+                                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="col-md-4">
+                      <div class="card project-card bg-dark text-white border-0 shadow-lg h-100">
+                            <img src="/calculator.png" class="card-img-top" alt="Calculator">
+
+                            <div class="card-body">
+                                  <h5 class="card-title fw-bold">Calculator</h5>
+                                  <p class="card-text">
+                                    A clean and responsive basic calculator made with HTML, CSS, and JavaScript.
+                                  </p>
+
+                                  <div class="mb-3">
+                                    <span class="badge bg-secondary px-3 py-2">HTML</span>
+                                    <span class="badge bg-secondary px-3 py-2">CSS</span>
+                                    <span class="badge bg-secondary px-3 py-2">JavaScript</span>
+                                  </div>
+
+                                  <div class="d-flex gap-2">
+                                      <a href="#" class="btn btn-outline-light w-50">
+                                        <i class="fa-brands fa-github"></i> Code
+                                      </a>
+                                      <a href="#" class="btn btn-violet w-50">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                                      </a>
+                                  </div>
+                            </div>
+                      </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="col-md-4">
+                    <div class="card project-card bg-dark text-white border-0 shadow-lg h-100">
+
+                      <img src="/portfolio.png" class="card-img-top" alt="Portfolio Website">
+
+                        <div class="card-body">
+                              <h5 class="card-title fw-bold">Personal Portfolio Website</h5>
+
+                              <p class="card-text">
+                                A fully responsive portfolio website showcasing my skills, projects, and contact details.
+                                Built with modern UI design, animations, and dark/light theme toggle.
+                              </p>
+
+                              <div class="mb-3">
+                                <span class="badge bg-secondary px-3 py-2">HTML</span>
+                                <span class="badge bg-secondary px-3 py-2">CSS</span>
+                                <span class="badge bg-secondary px-3 py-2">JavaScript</span>
+                                <span class="badge bg-secondary px-3 py-2">jQuery</span>
+                                <span class="badge bg-secondary px-3 py-2">bootstrap</span>
+                              </div>
+
+                              <div class="d-flex gap-2">
+                                  <a href="https://github.com/AshfahAshraf/your-portfolio-repo" class="btn btn-outline-light w-50">
+                                    <i class="fa-brands fa-github"></i> Code
+                                  </a>
+
+                                  <a href="https://your-portfolio.vercel.app/" class="btn btn-violet w-50">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                                  </a>
+                              </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+          </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact-section py-5">
+
+    <div class="container">
+
+        <h2 class="text-center text-white mb-5 display-5 fw-bold">
+          Get In <span class="text-violet">Touch</span>
+        </h2>
+
+        <div class="row justify-content-center align-items-start g-5">
+
+          <!-- LEFT SIDE CONTENT -->
+          <div class="col-md-5 text-white">
+
+                <h3 class="fw-bold mb-3">Let's work together</h3>
+                <p class="text-light mb-4">
+                  I'm always excited to collaborate on new projects and opportunities.
+                  Feel free to reach out anytime!
+                </p>
+
+                <div class="d-flex flex-column gap-3">
+
+                      <a href="mailto:ashfahashraf@gmail.com" class="btn contact-btn w-100">
+                        <i class="fa-regular fa-envelope"></i> &nbsp; ashfahashraf@gmail.com
+                      </a>
+
+                      <a href="https://www.linkedin.com/in/ashfah-ashraf-b32b2b22a/" class="btn social-btn w-100">
+                        <i class="fa-brands fa-linkedin-in"></i> &nbsp; LinkedIn
+                      </a>
+
+                      <a href="https://github.com/AshfahAshraf" class="btn social-btn w-100">
+                        <i class="fa-brands fa-github"></i> &nbsp; GitHub
+                      </a>
+
+                      <button class="btn social-btn w-100">
+                        <i class="fa-solid fa-map-pin"></i> &nbsp; Madiwala, Bangalore
+                      </button>
+
+                </div>
+          </div>
+
+          <!-- RIGHT SIDE CONTACT FORM -->
+          <div class="col-md-5">
+
+              <form class="d-flex flex-column gap-3">
+
+                <input type="text" class="form-control contact-input" placeholder="Your Name">
+
+                <input type="email" class="form-control contact-input" placeholder="Your Email">
+
+                <textarea rows="5" class="form-control contact-textarea" placeholder="Your Message"></textarea>
+
+                <button type="submit" class="btn btn-violet py-3 w-100 fw-bold">Send Message</button>
+
+              </form>
+
+          </div>
+
+        </div>
+
+    </div>
+
+  </section>
+
+
+  <footer class="footer-section py-4 text-center">
+      <p class="mb-0 text-white">
+        &copy; 2025 <span class="text-violet fw-bold">Ashfah Ashraf</span>. All rights reserved.
+      </p>
+  </footer>
+</body>
+</html>

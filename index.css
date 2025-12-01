@@ -1,0 +1,391 @@
+/*Navbar*/
+
+.navbar .nav-link {
+  color: white;
+  border-radius: 20px;
+  padding: 8px 15px;
+  transition: 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: #661fc9;
+  background-color: #000000;
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/*LightMode*/
+
+body.light-mode {
+  background: #f8f8f8;
+  color: #000;
+}
+
+/* Sections Background */
+body.light-mode .hero,
+body.light-mode .about-section,
+body.light-mode .skills-section,
+body.light-mode .projects-section,
+body.light-mode .contact-section,
+body.light-mode .footer-section {
+  background: #ffffff;
+}
+
+/* Text Light Mode */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode p,
+body.light-mode span,
+body.light-mode a {
+  color: #000;
+}
+
+/* Navbar Light Mode */
+body.light-mode .navbar {
+  background: #ffffffd9;
+}
+
+body.light-mode .navbar .nav-link {
+  color: #000;
+}
+
+body.light-mode .navbar .nav-link:hover {
+  background: #e7e7e7;
+  color: #661fc9;
+}
+
+/* Hero Image Light Mode */
+body.light-mode .hero-bg img {
+  opacity: 0.35;
+}
+
+/* Skill Cards Light Mode */
+body.light-mode .skill-card {
+  background: #f0f0f0;
+  color: #000;
+  border: 1px solid #bbb;
+}
+
+body.light-mode .progress {
+  background: #ddd;
+}
+
+body.light-mode .progress-bar {
+  background: #6a3dff;
+}
+
+/* Project Cards Light Mode */
+body.light-mode .project-card {
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+/* Badge Light Mode */
+.light-mode .badge {
+  background: #e9e9e9;
+  color: #000;
+  border-color: #ccc;
+}
+
+/* Theme Icon */
+body.light-mode #themeToggle i {
+  color: #000;
+}
+
+/*Hero Section*/
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.22;
+}
+
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 650px;
+  height: 650px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(112, 0, 255, 0.45) 0%, rgba(0,0,0,0) 75%);
+  filter: blur(80px);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+/*Text Buttons*/
+
+.text-violet {
+  color: blueviolet;
+}
+
+.btn-violet {
+  background-color: blueviolet;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-violet:hover {
+  background-color: #f7f5fa;
+  color: blueviolet;
+  border: 1px solid blueviolet;
+}
+
+.skills-text {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+/*About Section*/
+
+.about-section {
+  min-height: 100vh;
+  padding-top: 120px;
+  background: black;
+}
+
+.about-text {
+  color: #d6d6d6;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.light-mode .about-text {
+  color: #333;
+}
+
+.profile-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Badges Hover */
+.badge {
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.badge:hover {
+  border: 3px solid blueviolet;
+  transform: translateY(-4px);
+}
+
+/*Skils section*/
+
+.skills-section {
+  min-height: 100vh;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  background-color: #000;
+}
+
+.skill-card {
+  background: #111;
+  border-radius: 16px;
+  padding: 28px;
+  color: white;
+  transition: 0.5s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border: 2px solid blueviolet;
+}
+
+.progress {
+  height: 6px;
+  background: #2b2b2b;
+}
+
+.progress-bar {
+  background: #8b4dff;
+}
+
+/*Projects*/
+
+.projects-section {
+  min-height: 100vh;
+  background: black;
+  padding-top: 120px;
+}
+
+.project-card {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: blueviolet;
+  transform: translateY(-6px);
+}
+
+.project-card .badge {
+  display: inline-block;
+  margin: 4px 6px 0 0;
+  white-space: nowrap;
+}
+
+/*Contact Section*/
+
+.contact-section {
+  min-height: 100vh;
+  background: black;
+  padding-top: 120px;
+}
+
+/* Dark Mode Buttons */
+.contact-btn,
+.social-btn {
+  background: #111;
+  color: white;
+  border: 1px solid #333;
+  padding: 14px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.contact-btn:hover,
+.social-btn:hover {
+  border-color: blueviolet;
+  transform: translateX(5px);
+}
+
+/* Dark Mode Inputs */
+.contact-input,
+.contact-textarea {
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  color: white;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: white !important;
+  opacity: 0.6;
+}
+
+/*Contact Light Modefix*/
+
+body.light-mode .contact-section {
+  background: #ffffff;
+}
+
+body.light-mode .contact-btn,
+body.light-mode .social-btn {
+  background: #f1f1f1;
+  color: #000;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+body.light-mode .contact-btn:hover,
+body.light-mode .social-btn:hover {
+  background: #eaeaea;
+  border-color: blueviolet;
+  color: #000;
+}
+
+body.light-mode .contact-input,
+body.light-mode .contact-textarea {
+  background: #ffffff;
+  color: #000;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+body.light-mode .contact-input::placeholder,
+body.light-mode .contact-textarea::placeholder {
+  color: #666 !important;
+}
+
+body.light-mode .btn-violet {
+  background: blueviolet !important;
+  color: white !important;
+}
+
+body.light-mode .btn-violet:hover {
+  background: #6a27d5 !important;
+}
+
+/*Footer*/
+
+.footer-section {
+  background: black;
+  border-top: 1px solid #222;
+}
+
+.text-violet {
+  color: blueviolet;
+}
+
+/*Animation*/
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.slide-left {
+  opacity: 0;
+  animation: slideLeft 1.5s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+.delay-4 { animation-delay: 1.2s; }
