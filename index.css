@@ -1,4 +1,9 @@
-/*Navbar*/
+/* Smooth Transition */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/*Navbar */
 
 .navbar .nav-link {
   color: white;
@@ -21,42 +26,33 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
-/*LightMode*/
+/*Light mode*/
 
 body.light-mode {
   background: #f8f8f8;
   color: #000;
 }
 
-/* Sections Background */
+/* Light backgrounds */
 body.light-mode .hero,
 body.light-mode .about-section,
-body.light-mode .skills-section,
-body.light-mode .projects-section,
-body.light-mode .contact-section,
-body.light-mode .footer-section {
+body.light-mode .contact-section {
   background: #ffffff;
 }
 
-/* Text Light Mode */
-body.light-mode h1,
-body.light-mode h2,
-body.light-mode h3,
-body.light-mode h4,
-body.light-mode h5,
-body.light-mode p,
-body.light-mode span,
-body.light-mode a {
-  color: #000;
+body.light-mode .skills-section,
+body.light-mode .projects-section,
+body.light-mode .footer-section {
+  background: #fafafa;
 }
 
-/* Navbar Light Mode */
+/* Light Mode Navbar */
 body.light-mode .navbar {
   background: #ffffffd9;
 }
 
 body.light-mode .navbar .nav-link {
-  color: #000;
+  color: #000 !important;
 }
 
 body.light-mode .navbar .nav-link:hover {
@@ -64,46 +60,115 @@ body.light-mode .navbar .nav-link:hover {
   color: #661fc9;
 }
 
-/* Hero Image Light Mode */
+/*Fix Invisible Text In Light Mode */
+
+
+body.light-mode .text-white,
+body.light-mode [style*="color: white"],
+body.light-mode .hero h1,
+body.light-mode .hero p,
+body.light-mode .about-section h1,
+body.light-mode .about-section h2,
+body.light-mode .about-section p,
+body.light-mode .skills-section h2,
+body.light-mode .projects-section h2,
+body.light-mode .contact-section h2,
+body.light-mode .footer-section p {
+  color: #000;
+}
+
+/* Preserve purple text */
+body.light-mode .text-violet {
+  color: blueviolet;
+}
+
+/* Hero image light mode */
 body.light-mode .hero-bg img {
   opacity: 0.35;
 }
 
-/* Skill Cards Light Mode */
+/* Skills card Light Mode */
 body.light-mode .skill-card {
   background: #f0f0f0;
   color: #000;
   border: 1px solid #bbb;
 }
-
 body.light-mode .progress {
   background: #ddd;
 }
-
 body.light-mode .progress-bar {
   background: #6a3dff;
 }
 
-/* Project Cards Light Mode */
+/* Project card Light Mode */
 body.light-mode .project-card {
   background: #fff;
-  color: #000;
+  color:white;
   border: 1px solid #ccc;
 }
 
-/* Badge Light Mode */
-.light-mode .badge {
-  background: #e9e9e9;
-  color: #000;
-  border-color: #ccc;
+/* Fix Project Card Text Visibility in Light Mode */
+body.light-mode .project-card h5,
+body.light-mode .project-card p,
+body.light-mode .project-card span,
+body.light-mode .project-card a {
+  color:white;
 }
 
-/* Theme Icon */
+
+/* Badge Light Mode */
+body.light-mode .badge {
+  background: #e9e9e9;
+  color: white;
+  border: 1px solid #ccc;
+}
+
+/* Contact Light Mode */
+body.light-mode .contact-btn,
+body.light-mode .social-btn {
+  background: #f1f1f1;
+  color: #000;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+/* Fix Contact Section Paragraph in Light Mode */
+body.light-mode .contact-section p {
+  color: #000;
+  opacity: 1;
+}
+
+
+body.light-mode .contact-input,
+body.light-mode .contact-textarea {
+  background: #ffffff;
+  color: #000;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+body.light-mode .contact-input::placeholder,
+body.light-mode .contact-textarea::placeholder {
+  color: #666;
+}
+
+/* Buttons Light Mode */
+body.light-mode .btn-violet {
+  background: blueviolet;
+  color: white;
+}
+body.light-mode .btn-violet:hover {
+  background: #6a27d5;
+}
+
+/* Theme toggle */
+#themeToggle {
+  cursor: pointer;
+}
 body.light-mode #themeToggle i {
   color: #000;
 }
 
-/*Hero Section*/
+/* Hero Section*/
 
 .hero {
   position: relative;
@@ -118,10 +183,10 @@ body.light-mode #themeToggle i {
 
 .hero-bg {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   z-index: 1;
 }
 
@@ -132,29 +197,17 @@ body.light-mode #themeToggle i {
   opacity: 0.22;
 }
 
-.hero-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 650px;
-  height: 650px;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(112, 0, 255, 0.45) 0%, rgba(0,0,0,0) 75%);
-  filter: blur(80px);
-  z-index: 2;
-}
-
 .hero-content {
   position: relative;
   z-index: 3;
 }
 
-/*Text Buttons*/
-
+/* Text colors */
 .text-violet {
   color: blueviolet;
 }
 
+/* Buttons */
 .btn-violet {
   background-color: blueviolet;
   color: white;
@@ -190,10 +243,6 @@ body.light-mode #themeToggle i {
   line-height: 1.7;
 }
 
-.light-mode .about-text {
-  color: #333;
-}
-
 .profile-img {
   width: 250px;
   height: 250px;
@@ -201,18 +250,7 @@ body.light-mode #themeToggle i {
   border-radius: 50%;
 }
 
-/* Badges Hover */
-.badge {
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-.badge:hover {
-  border: 3px solid blueviolet;
-  transform: translateY(-4px);
-}
-
-/*Skils section*/
+/*Skils Section*/
 
 .skills-section {
   min-height: 100vh;
@@ -243,7 +281,7 @@ body.light-mode #themeToggle i {
   background: #8b4dff;
 }
 
-/*Projects*/
+/* Projects*/
 
 .projects-section {
   min-height: 100vh;
@@ -254,7 +292,7 @@ body.light-mode #themeToggle i {
 .project-card {
   border: 2px solid transparent;
   border-radius: 10px;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
 .project-card:hover {
@@ -262,13 +300,7 @@ body.light-mode #themeToggle i {
   transform: translateY(-6px);
 }
 
-.project-card .badge {
-  display: inline-block;
-  margin: 4px 6px 0 0;
-  white-space: nowrap;
-}
-
-/*Contact Section*/
+/* Contact*/
 
 .contact-section {
   min-height: 100vh;
@@ -276,7 +308,6 @@ body.light-mode #themeToggle i {
   padding-top: 120px;
 }
 
-/* Dark Mode Buttons */
 .contact-btn,
 .social-btn {
   background: #111;
@@ -287,13 +318,6 @@ body.light-mode #themeToggle i {
   transition: 0.3s;
 }
 
-.contact-btn:hover,
-.social-btn:hover {
-  border-color: blueviolet;
-  transform: translateX(5px);
-}
-
-/* Dark Mode Inputs */
 .contact-input,
 .contact-textarea {
   background: #141414;
@@ -305,51 +329,8 @@ body.light-mode #themeToggle i {
 
 .contact-input::placeholder,
 .contact-textarea::placeholder {
-  color: white !important;
+  color: white;
   opacity: 0.6;
-}
-
-/*Contact Light Modefix*/
-
-body.light-mode .contact-section {
-  background: #ffffff;
-}
-
-body.light-mode .contact-btn,
-body.light-mode .social-btn {
-  background: #f1f1f1;
-  color: #000;
-  border: 1px solid #ccc;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
-}
-
-body.light-mode .contact-btn:hover,
-body.light-mode .social-btn:hover {
-  background: #eaeaea;
-  border-color: blueviolet;
-  color: #000;
-}
-
-body.light-mode .contact-input,
-body.light-mode .contact-textarea {
-  background: #ffffff;
-  color: #000;
-  border: 1px solid #ccc;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
-}
-
-body.light-mode .contact-input::placeholder,
-body.light-mode .contact-textarea::placeholder {
-  color: #666 !important;
-}
-
-body.light-mode .btn-violet {
-  background: blueviolet !important;
-  color: white !important;
-}
-
-body.light-mode .btn-violet:hover {
-  background: #6a27d5 !important;
 }
 
 /*Footer*/
@@ -357,10 +338,6 @@ body.light-mode .btn-violet:hover {
 .footer-section {
   background: black;
   border-top: 1px solid #222;
-}
-
-.text-violet {
-  color: blueviolet;
 }
 
 /*Animation*/
@@ -375,15 +352,8 @@ body.light-mode .btn-violet:hover {
   to { opacity: 1; transform: translateX(0); }
 }
 
-.fade-up {
-  opacity: 0;
-  animation: fadeUp 1s ease-out forwards;
-}
-
-.slide-left {
-  opacity: 0;
-  animation: slideLeft 1.5s ease-out forwards;
-}
+.fade-up { opacity: 0; animation: fadeUp 1s ease-out forwards; }
+.slide-left { opacity: 0; animation: slideLeft 1.5s ease-out forwards; }
 
 .delay-1 { animation-delay: 0.3s; }
 .delay-2 { animation-delay: 0.6s; }
