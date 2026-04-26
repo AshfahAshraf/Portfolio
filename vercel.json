@@ -1,5 +1,10 @@
 {
   "framework": null,
   "outputDirectory": ".",
-  "cleanUrls": true
+  "buildCommand": "",
+  "installCommand": "",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
