@@ -1,5 +1,7 @@
 /* Smooth Transition */
 body {
+  background-color: #000;
+  color: #fff;
   transition: background-color 0.4s ease, color 0.4s ease;
   overflow-x: hidden;
 }
@@ -267,8 +269,22 @@ body.light-mode #themeToggle i {
 
 /* Text colors */
 .text-violet {
-  color: blueviolet;
-  text-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+  color: #a855f7 !important;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+.bg-violet {
+  background-color: blueviolet !important;
+  color: #ffffff !important;
+}
+
+/* High contrast secondary text for dark mode */
+body:not(.light-mode) .text-secondary {
+  color: #d1d5db !important; /* Bright silver gray for dark mode readability */
+}
+
+body:not(.light-mode) .timeline-content strong.text-white {
+  color: #ffffff !important;
 }
 
 .fade-up, .lead, .skills-text {
@@ -447,6 +463,17 @@ body.light-mode #themeToggle i {
   padding-top: 120px;
 }
 
+.projects-section .btn {
+  padding: 10px 24px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
 .project-row {
   transition: all 1.2s ease-out;
 }
@@ -546,16 +573,19 @@ body.light-mode #themeToggle i {
 }
 
 .project-badge {
-  background: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  color: #fff !important;
+  background: rgba(138, 43, 226, 0.15) !important;
+  border: 1px solid rgba(168, 85, 247, 0.4) !important;
+  color: #f3e8ff !important;
   cursor: pointer;
+  border-radius: 20px;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .project-badge:hover {
-  border-color: blueviolet !important;
-  background: rgba(138, 43, 226, 0.1) !important;
+  border-color: #a855f7 !important;
+  background: rgba(138, 43, 226, 0.3) !important;
+  color: #ffffff !important;
   transform: scale(1.05);
 }
 
@@ -573,21 +603,47 @@ body.light-mode #themeToggle i {
 /* Scroll Animations */
 .scroll-hidden {
   opacity: 0 !important;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-  filter: blur(4px);
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: blur(5px);
   pointer-events: none;
+}
+
+.scroll-hidden.animate-up {
+  transform: translateY(60px) scale(0.97);
+}
+
+.scroll-hidden.animate-down {
+  transform: translateY(-60px) scale(0.97);
+}
+
+.scroll-hidden.animate-left {
+  transform: translateX(-60px) scale(0.97);
+}
+
+.scroll-hidden.animate-right {
+  transform: translateX(60px) scale(0.97);
+}
+
+.scroll-hidden.animate-fade {
+  transform: scale(0.95);
 }
 
 .scroll-hidden.show {
   opacity: 1 !important;
-  transform: translateY(0);
+  transform: translateY(0) translateX(0) scale(1);
   filter: blur(0);
   pointer-events: auto;
 }
 
 /* Education Timeline Styles */
 .education-section {
+  min-height: 80vh;
+  background: black;
+  padding-top: 100px;
+}
+
+/* Experience Timeline Styles */
+.experience-section {
   min-height: 80vh;
   background: black;
   padding-top: 100px;
@@ -625,9 +681,10 @@ body.light-mode #themeToggle i {
 }
 
 .card-glass {
-  background: #000;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(15, 15, 22, 0.95);
+  border: 1px solid rgba(168, 85, 247, 0.25);
   border-radius: 15px;
+  backdrop-filter: blur(10px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   position: relative;
@@ -635,10 +692,10 @@ body.light-mode #themeToggle i {
 }
 
 .card-glass:hover {
-  background: #050505;
-  border-color: rgba(138, 43, 226, 0.6);
+  background: rgba(22, 20, 35, 0.98);
+  border-color: rgba(168, 85, 247, 0.6);
   transform: translateX(10px);
-  box-shadow: 0 10px 30px rgba(138, 43, 226, 0.15);
+  box-shadow: 0 10px 30px rgba(138, 43, 226, 0.25);
 }
 
 .card-glass::before {
@@ -663,13 +720,15 @@ body.light-mode #themeToggle i {
 
 /* --- LIGHT MODE REFINEMENTS --- */
 body.light-mode { background: #ffffff; color: #111111; }
-body.light-mode .text-white { color: #111111 !important; }
-body.light-mode .text-light { color: #444444 !important; }
-body.light-mode .text-secondary { color: #666666 !important; }
+body.light-mode .text-white { color: #0f172a !important; }
+body.light-mode .text-light { color: #334155 !important; }
+body.light-mode .text-secondary { color: #475569 !important; }
+body.light-mode .timeline-content strong.text-white { color: #0f172a !important; }
 
 body.light-mode .about-section,
 body.light-mode .skills-section,
 body.light-mode .projects-section,
+body.light-mode .experience-section,
 body.light-mode .education-section,
 body.light-mode .contact-section { 
   background: #fdfdfd !important; 
@@ -717,9 +776,10 @@ body.light-mode .theme-btn {
 }
 
 body.light-mode .project-badge {
-  background: #f0f0f0 !important;
-  border-color: #ddd !important;
-  color: #111 !important;
+  background: #f3e8ff !important;
+  border: 1px solid #c084fc !important;
+  color: #6b21a8 !important;
+  font-weight: 600;
 }
 
 body.light-mode .btn-outline-light {
