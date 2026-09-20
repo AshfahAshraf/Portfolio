@@ -1,6 +1,29 @@
+import { useEffect, useRef, useState } from 'react';
 import ScrollAnimate from './ScrollAnimate';
 
 const Experience = () => {
+  const containerRef = useRef(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      const startPoint = windowHeight * 0.75;
+      const totalDistance = rect.height;
+      const currentScroll = startPoint - rect.top;
+      
+      const progress = Math.min(Math.max(currentScroll / totalDistance, 0), 1);
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section id="experience" className="experience-section py-5">
       <div className="container">
@@ -10,8 +33,14 @@ const Experience = () => {
           </h2>
         </ScrollAnimate>
 
-        <div className="timeline-container mx-auto" style={{ maxWidth: '900px' }}>
-          <div className="timeline-line"></div>
+        <div ref={containerRef} className="timeline-container mx-auto" style={{ maxWidth: '900px' }}>
+          <div className="timeline-line-bg"></div>
+          <div 
+            className="timeline-line-progress"
+            style={{ height: `${scrollProgress * 100}%` }}
+          >
+            <div className="timeline-line-head" />
+          </div>
 
           <ScrollAnimate direction="right">
             <div className="timeline-item mb-5">
@@ -35,6 +64,9 @@ const Experience = () => {
                 <ul className="text-secondary mb-3 ps-3 text-start">
                   <li className="mb-2">
                     Developed a <strong className="text-white">LegalTech platform</strong> serving 5 user roles with secure <strong className="text-violet">JWT Authentication</strong> and <strong className="text-violet">Role-Based Access Control (RBAC)</strong>.
+                  </li>
+                  <li className="mb-2">
+                    Built a full-stack <strong className="text-white">Dental Clinic Management System</strong> with patient appointment booking, treatment catalogs, and administrative management panel.
                   </li>
                   <li className="mb-2">
                     Improved API response time by <strong className="text-success">30%</strong> through query optimization and efficient database design.

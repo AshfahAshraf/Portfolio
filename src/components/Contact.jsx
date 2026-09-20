@@ -67,7 +67,7 @@ const Contact = () => {
                   <i className="fa-brands fa-github"></i> &nbsp; GitHub
                 </a>
                 <button className="btn social-btn w-100">
-                  <i className="fa-solid fa-map-pin"></i> &nbsp; Madiwala, Bangalore
+                  <i className="fa-solid fa-map-pin"></i> &nbsp; Kerala, India
                 </button>
               </div>
             </ScrollAnimate>

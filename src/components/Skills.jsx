@@ -46,7 +46,7 @@ const Skills = () => {
       <div className="container text-center">
         <ScrollAnimate direction="down">
           <h2 className="mb-4 display-5 fw-bold text-white">
-            Technical <span className="text-violet">Arsenal</span>
+            Skills & <span className="text-violet">Technologies</span>
           </h2>
         </ScrollAnimate>
 

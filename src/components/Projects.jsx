@@ -8,7 +8,7 @@ const Projects = () => {
       description: "Full-stack legal tech platform with an automated e-Courts India API gateway (CNR tracking), AI-assisted legal document drafting engine with Junior-to-Senior approval workflow, Razorpay payment processing, and Google Calendar hearing alerts.",
       tags: ["FastAPI", "Next.js", "Python", "MySQL", "SQLAlchemy", "JWT", "Razorpay", "Alembic"],
       image: "/legaltech.png",
-      github: "https://github.com/AshfahAshraf",
+      github: "https://github.com/AshfahAshraf/Legal-Tech",
       reverse: false
     },
     {
@@ -21,11 +21,10 @@ const Projects = () => {
     },
     {
       title: "Dental Clinic Management System",
-      status: "Ongoing",
-      description: "A comprehensive full-stack web application for dental clinics, featuring an intuitive appointment booking system, patient reviews, and streamlined clinic operations.",
+      description: "A modern, high-performance full-stack web application for dental clinics featuring a patient-facing portal (online booking, treatment catalog, before/after gallery, virtual tour, Google reviews) and a robust admin dashboard for clinic staff to manage appointments, doctors, services, and patient inquiries.",
       tags: ["React", "TypeScript", "Python", "Django", "MySQL"],
       image: "/dental.png",
-      github: "https://github.com/AshfahAshraf",
+      github: "https://github.com/AshfahAshraf/Dental-Clinic.git",
       reverse: false
     },
     {

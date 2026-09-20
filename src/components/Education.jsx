@@ -1,6 +1,29 @@
+import { useEffect, useRef, useState } from 'react';
 import ScrollAnimate from './ScrollAnimate';
 
 const Education = () => {
+  const containerRef = useRef(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      const startPoint = windowHeight * 0.75;
+      const totalDistance = rect.height;
+      const currentScroll = startPoint - rect.top;
+      
+      const progress = Math.min(Math.max(currentScroll / totalDistance, 0), 1);
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const educationData = [
     {
       title: "Python Full Stack Development Training",
@@ -27,8 +50,14 @@ const Education = () => {
           </h2>
         </ScrollAnimate>
 
-        <div className="timeline-container mx-auto" style={{ maxWidth: '900px' }}>
-          <div className="timeline-line"></div>
+        <div ref={containerRef} className="timeline-container mx-auto" style={{ maxWidth: '900px' }}>
+          <div className="timeline-line-bg"></div>
+          <div 
+            className="timeline-line-progress"
+            style={{ height: `${scrollProgress * 100}%` }}
+          >
+            <div className="timeline-line-head" />
+          </div>
 
           {educationData.map((item, idx) => (
             <ScrollAnimate key={idx} delay={idx * 0.2} direction="left">
