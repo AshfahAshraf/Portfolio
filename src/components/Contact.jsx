@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import ScrollAnimate from './ScrollAnimate';
 
+
 const Contact = () => {
   const form = useRef();
   const [status, setStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
