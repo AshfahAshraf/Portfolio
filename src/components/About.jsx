@@ -1,5 +1,6 @@
 import ScrollAnimate from './ScrollAnimate';
 
+
 const About = () => {
   return (
     <section className="about-section py-5" id="about">
