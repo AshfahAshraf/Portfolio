@@ -40,6 +40,7 @@ const Contact = () => {
       });
   };
 
+  
   return (
     <section id="contact" className="contact-section py-5">
       <div className="container">
