@@ -8,6 +8,7 @@ const Contact = () => {
   const [status, setStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
   const [statusMessage, setStatusMessage] = useState('');
 
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus('sending');
