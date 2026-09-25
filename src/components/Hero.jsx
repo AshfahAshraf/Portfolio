@@ -41,7 +41,7 @@ const Hero = () => {
             <a href="#projects" className="btn btn-violet me-3">
               View My Work ↓
             </a>
-            <a href="/Ashfah_Ashraf_Python_Fullstack.pdf" download className="btn btn-violet">
+            <a href="/Ashfah_Ashraf.pdf" download="Ashfah Ashraf.pdf" className="btn btn-violet">
               Download Resume ↓
             </a>
           </div>
