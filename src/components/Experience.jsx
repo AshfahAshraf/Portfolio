@@ -57,27 +57,24 @@ const Experience = () => {
                 </div>
 
                 <div className="d-flex flex-wrap gap-4 text-secondary small mb-3">
-                  <span><i className="fa-solid fa-calendar-days text-violet me-2"></i> April 2026 - September 2026</span>
+                  <span><i className="fa-solid fa-calendar-days text-violet me-2"></i> March 2026 - September 2026</span>
                   <span><i className="fa-solid fa-location-dot text-violet me-2"></i> Kerala, India</span>
                 </div>
 
                 <ul className="text-secondary mb-3 ps-3 text-start">
                   <li className="mb-2">
-                    Developed a <strong className="text-white">LegalTech platform</strong> serving 5 user roles with secure <strong className="text-violet">JWT Authentication</strong> and <strong className="text-violet">Role-Based Access Control (RBAC)</strong>.
+                    Led feature development for a <strong className="text-white">4-member team</strong> to build a production-ready law firm management system using <strong className="text-violet">Next.js 16</strong>, <strong className="text-violet">React</strong>, <strong className="text-violet">Python FastAPI</strong>, and <strong className="text-violet">MySQL</strong>.
                   </li>
                   <li className="mb-2">
-                    Built a full-stack <strong className="text-white">Dental Clinic Management System</strong> with patient appointment booking, treatment catalogs, and administrative management panel.
-                  </li>
-                  <li className="mb-2">
-                    Improved API response time by <strong className="text-success">30%</strong> through query optimization and efficient database design.
+                    Engineered an automated <strong className="text-white">eCourts portal sync engine</strong> and background scheduler, optimizing database indexing to reduce API response latency by <strong className="text-success">30%</strong> during load testing.
                   </li>
                   <li>
-                    Led feature development for a <strong className="text-white">4-member development team</strong>, managing Git workflows, code reviews, and sprint delivery.
+                    Architected granular <strong className="text-violet">JWT-based RBAC</strong> across 4 user roles, integrated <strong className="text-white">Razorpay payment workflows</strong>, and containerized microservices with <strong className="text-violet">Docker</strong> for seamless staging deployments.
                   </li>
                 </ul>
 
                 <div className="d-flex flex-wrap gap-2 mt-3">
-                  {['Python', 'FastAPI', 'Next.js', 'Django', 'MySQL', 'JWT', 'RBAC', 'Git'].map((tech, idx) => (
+                  {['Python', 'FastAPI', 'Next.js 16', 'React', 'MySQL', 'Docker', 'JWT', 'RBAC', 'Razorpay'].map((tech, idx) => (
                     <span key={idx} className="badge project-badge px-2 py-1">{tech}</span>
                   ))}
                 </div>
