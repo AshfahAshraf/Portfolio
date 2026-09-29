@@ -48,7 +48,7 @@ const Experience = () => {
               <div className="timeline-content card-glass p-4">
                 <div className="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
                   <div>
-                    <h3 className="fw-bold text-white mb-1">Full Stack Developer</h3>
+                    <h3 className="fw-bold text-white mb-1">Full Stack Developer Intern</h3>
                     <p className="text-violet fw-bold mb-0">
                       <i className="fa-solid fa-briefcase me-2"></i> MarketBytes
                     </p>
@@ -57,7 +57,7 @@ const Experience = () => {
                 </div>
 
                 <div className="d-flex flex-wrap gap-4 text-secondary small mb-3">
-                  <span><i className="fa-solid fa-calendar-days text-violet me-2"></i> March 2026 - September 2026</span>
+                  <span><i className="fa-solid fa-calendar-days text-violet me-2"></i> April 2026 - September 2026</span>
                   <span><i className="fa-solid fa-location-dot text-violet me-2"></i> Kerala, India</span>
                 </div>
 

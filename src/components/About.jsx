@@ -22,18 +22,17 @@ const About = () => {
             <ScrollAnimate delay={0.4} direction="right">
               <h2 className="fw-bold mb-3">Full Stack Developer</h2>
               <p className="about-text">
-                I’m Ashfah Ashraf, a Full Stack Developer dedicated to crafting high-performance, responsive web
-                applications with a strong foundation in modern frontend frameworks and robust backend systems.
+                I’m <strong className="text-white">Ashfah Ashraf</strong>, a Full Stack Developer with hands-on experience building scalable, high-performance web applications using <strong className="text-violet">Python (FastAPI, Django)</strong>, <strong className="text-violet">React</strong>, <strong className="text-violet">Next.js</strong>, and <strong className="text-violet">MySQL/MongoDB</strong>.
               </p>
               <p className="about-text">
-                Specializing in Python, Django, FastAPI, React, and Next.js, I bridge the gap between design and architecture building seamless user interfaces paired with secure, scalable RESTful APIs and database solutions.
+                As a <strong className="text-white">Full Stack Developer Intern</strong> at <strong className="text-white">MarketBytes (Infopark Cherthala)</strong>, I led feature development for a 4-member team, engineering a production LegalTech platform with an automated <strong className="text-white">e-Courts India API gateway</strong>, AI document drafting engine, and JWT Role-Based Access Control (RBAC)—achieving a <strong className="text-success">30% reduction in API response times</strong> through query optimization.
               </p>
               <p className="about-text">
-                Passionate about writing clean, maintainable code and solving complex technical challenges, I continuously explore new technologies and best practices to deliver intuitive digital experiences.
+                My portfolio includes <strong className="text-violet">CraftHover</strong> (an AI handicraft marketplace leveraging Hugging Face Transformers & Chart.js) and specialized training from <strong className="text-white">BLearn Academy</strong> paired with a B.Tech in Computer Science. I focus on delivering clean, maintainable code, secure RESTful APIs, and responsive digital experiences.
               </p>
 
               <div className="d-flex flex-wrap gap-2 mt-4">
-                {['Python', 'Django', 'FastAPI', 'React.js', 'Next.js', 'TypeScript', 'MySQL', 'MongoDB'].map((skill, i) => (
+                {['Python', 'Django', 'FastAPI', 'React.js', 'Next.js', 'TypeScript', 'MySQL', 'MongoDB', 'JWT / RBAC', 'Hugging Face'].map((skill, i) => (
                   <span key={i} className="badge skill-badge px-3 py-2">{skill}</span>
                 ))}
               </div>
